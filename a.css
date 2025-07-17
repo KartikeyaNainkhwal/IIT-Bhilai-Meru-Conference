@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #e6f4f1;
+  color: #1a1a1a;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #190065;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 60px;
+  margin-right: 10px;
+}
+
+.logo span {
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.banner-image {
+  width: 100%;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding: 0;
+}
+
+.banner-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 500px; /* controls vertical height */
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+
+/* Conference Title Section */
+.conference-title {
+  background-color: #fffff0;
+  text-align: center;
+  padding: 20px;
+  color: #0d0477;
+}
+
+.conference-title h1 {
+  color: #00008b;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.conference-title p {
+  font-size: 1.1em;
+  color: #a12445;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+main {
+  padding: 30px 20px;
+  width:1000px;
+  text-align: center;
+
+}
+
+.info p {
+  margin-bottom: 15px;
+}
+
+.info .dates,
+.info .venue,
+.info .accommodation {
+  color: #b10044;
+}
+
+.image img {
+  width: 100%;
+  max-width: 1000px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.program h2 {
+  text-align: center;
+  margin: 20px 0 10px;
+}
+
+.program p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 12px;
+  text-align: center;
+}
+
+thead {
+  background-color: #f0f0f0;
+}
+
+.break {
+  background-color: #fff8dc;
+  font-weight: bold;
+}
+
