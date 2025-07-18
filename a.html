@@ -9,27 +9,32 @@
 <body>
 
   <!-- Header -->
-  <header>
+  <header class="site-header">
     <div class="logo">
       <img src="https://events.iitbhilai.ac.in/icmc2025/LDC.jpeg" alt="IIT Bhilai Logo">
-      <span>IIT Bhilai<br><small>IIT Bhilai Campus</small></span>
+      <div>
+        <h1>IIT Bhilai</h1>
+        <p><small>IIT Bhilai Campus</small></p>
+      </div>
     </div>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Program</a>
-      <a href="#">Speakers</a>
-      <a href="#">Committee</a>
-      <a href="#">Important Dates</a>
-      <a href="#">Registration & Abstract Submission</a>
-      <a href="#">Sponsors</a>
-      <a href="#">Venue</a>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#program">Program</a></li>
+        <li><a href="#speakers">Speakers</a></li>
+        <li><a href="#committee">Committee</a></li>
+        <li><a href="#dates">Important Dates</a></li>
+        <li><a href="#registration">Registration & Abstract Submission</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="#venue">Venue</a></li>
+      </ul>
     </nav>
   </header>
 
-  <!-- Title Section -->
-  <section class="conference-title">
-    <h1>Third Meru Combinatorics Conference 2025</h1>
+  <!-- Home -->
+  <section id="home" class="conference-title">
+    <h2>Third Meru Combinatorics Conference 2025</h2>
     <p><strong>28<sup>th</sup> – 30<sup>th</sup> May, 2025</strong></p>
     <p>Department of Mathematics<br>IIT Bhilai</p>
   </section>
@@ -39,66 +44,102 @@
     <img src="https://events.iitbhilai.ac.in/icmc2025/LDC.jpeg" alt="Campus Image">
   </div>
 
-  <!-- Main Content -->
-  <main>
-    <div>
-      <section class="info">
-        <p>This is the third of a series of annual conferences on combinatorics in India: the Meru Annual Combinatorics Conference. The series features a format that includes two in-depth minicourses on topics in combinatorics (broadly interpreted), alongside contributed talks and poster presentations.</p>
+  <main class="main-content">
+    <!-- About -->
+    <section id="about" class="info">
+      <h2>About</h2>
+      <p>This is the third of a series of annual conferences on combinatorics in India: the Meru Annual Combinatorics Conference. The series features a format that includes two in-depth minicourses on topics in combinatorics (broadly interpreted), alongside contributed talks and poster presentations.</p>
+      <p>Past Meru Combinatorics Conferences: 
+        <a href="#">First Meru Combinatorics Conference 2023</a>, 
+        <a href="#">Second Meru Combinatorics Conference 2024</a>.
+      </p>
+      <p>Meru stands for the mountain in Indian mythology and was used as a metaphor for the triangle of binomial coefficients studied by classical Indian prosodists.</p>
+    </section>
 
-        <p>Past Meru Combinatorics Conferences: 
-          <a href="#">First Meru Combinatorics Conference 2023</a>, 
-          <a href="#">Second Meru Combinatorics Conference 2024</a>.
-        </p>
+    <!-- Program -->
+    <section id="program" class="program">
+      <h2>Program</h2>
+      <p>Click <a href="#">here</a> for the detailed Scientific Program.</p>
+      <p><strong>Venue:</strong> DLT 10</p>
+      <table>
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Day 1<br>(May 28)</th>
+            <th>Day 2<br>(May 29)</th>
+            <th>Day 3<br>(May 30)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>08:00 – 09:00</td>
+            <td>Registration</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>09:00 – 09:30</td>
+            <td colspan="3">Welcome & Opening Remarks<br><i>DLT 9</i></td>
+          </tr>
+          <tr>
+            <td>09:30 – 11:00</td>
+            <td>Minicourse I: Part 1<br>M K Srinivasan</td>
+            <td>Minicourse I: Part 2<br>M K Srinivasan</td>
+            <td>Minicourse I: Part 3<br>M K Srinivasan</td>
+          </tr>
+          <tr>
+            <td colspan="4" class="break">Tea / Coffee Break</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-        <p>Meru stands for the mountain in Indian mythology and was used as a metaphor for the triangle of binomial coefficients studied by classical Indian prosodists.</p>
+    <!-- Speakers -->
+    <section id="speakers">
+      <h2>Speakers</h2>
+      <p>To be updated soon...</p>
+    </section>
 
-        <p class="dates"><strong>Dates:</strong> 28th to 30th May, 2025</p>
-        <p class="venue"><strong>Venue:</strong> Department of Mathematics, IIT Bhilai, Chhattisgarh, India</p>
-        <p class="accommodation"><strong>On-Campus Accommodation:</strong> Check-in date: 27th May 2025, Check-out date: 31st May 2025</p>
-      </section>
+    <!-- Committee -->
+    <section id="committee">
+      <h2>Organizing Committee</h2>
+      <p>To be updated soon...</p>
+    </section>
 
-      <section class="image">
-        <img src="conference-photo.jpg" alt="Group photo of Third Meru Combinatorics Conference participants">
-      </section>
+    <!-- Important Dates -->
+    <section id="dates">
+      <h2>Important Dates</h2>
+      <ul>
+        <li>Abstract submission deadline: To be announced</li>
+        <li>Notification of acceptance: To be announced</li>
+        <li>Conference dates: 28<sup>th</sup> – 30<sup>th</sup> May, 2025</li>
+      </ul>
+    </section>
 
-      <section class="program">
-        <h2>Program</h2>
-        <p>Click <a href="#">here</a> for the detailed Scientific Program.</p>
-        <p><strong>Venue:</strong> DLT 10</p>
+    <!-- Registration & Abstract Submission -->
+    <section id="registration">
+      <h2>Registration & Abstract Submission</h2>
+      <p>Details will be updated soon on registration fees, deadlines, and submission instructions.</p>
+    </section>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Time</th>
-              <th>Day 1<br>(May 28)</th>
-              <th>Day 2<br>(May 29)</th>
-              <th>Day 3<br>(May 30)</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>08:00 – 09:00</td>
-              <td>Registration</td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td>09:00 – 09:30</td>
-              <td colspan="3">Welcome & Opening Remarks<br><i>DLT 9</i></td>
-            </tr>
-            <tr>
-              <td>09:30 – 11:00</td>
-              <td>Minicourse I: Part 1<br>M K Srinivasan</td>
-              <td>Minicourse I: Part 2<br>M K Srinivasan</td>
-              <td>Minicourse I: Part 3<br>M K Srinivasan</td>
-            </tr>
-            <tr>
-              <td colspan="4" class="break">Tea / Coffee Break</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </div>
+    <!-- Sponsors -->
+    <section id="sponsors">
+      <h2>Sponsors</h2>
+      <p>Sponsorship details to be updated.</p>
+    </section>
+
+    <!-- Venue -->
+    <section id="venue">
+      <h2>Venue</h2>
+      <p><strong>Location:</strong> Department of Mathematics, IIT Bhilai, Chhattisgarh, India</p>
+      <p><strong>Accommodation:</strong> On-campus housing is available from 27th May to 31st May, 2025</p>
+      <div class="map-container">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3719.3210083831266!2d81.28467607457941!3d21.13159488053859!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a28c6f17e48c161%3A0x1c2b5e2b775f9824!2sIIT%20Bhilai!5e0!3m2!1sen!2sin!4v1622800345082!5m2!1sen!2sin"
+          width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+      </div>
+    </section>
   </main>
 
 </body>
