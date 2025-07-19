@@ -1,310 +1,274 @@
-/* Base styles */
+/* --- NEW AND IMPROVED DESIGN --- */
+
+/* --- 1. CSS Variables & Root Styles --- */
+/* Using variables for easy theme changes */
+:root {
+  --primary-color: #0d3b66;      /* Deep Blue for headings and headers */
+  --secondary-color: #faf0e6;    /* Linen - for section backgrounds */
+  --accent-color: #e5a92d;       /* Gold for accents and highlights */
+  --text-color: #343a40;         /* Dark Gray for body text */
+  --light-gray: #f8f9fa;         /* Light Gray for backgrounds */
+  --white: #ffffff;
+  --font-main: 'Lato', sans-serif;
+  --shadow: 0 4px 12px rgba(0,0,0,0.08);
+  --border-radius: 8px;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8f9fa;
-  color: #333;
-  line-height: 1.6;
+html {
+  scroll-behavior: smooth;
 }
 
-/* Header */
+body {
+  font-family: var(--font-main);
+  background-color: var(--light-gray);
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 900;
+  border-bottom: 3px solid var(--accent-color);
+  display: inline-block;
+  padding-bottom: 8px;
+  margin-bottom: 2rem;
+}
+
+a {
+  color: var(--primary-color);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+section {
+  padding: 50px 0;
+}
+
+/* --- 2. Header & Navigation --- */
 .site-header {
-  background: linear-gradient(135deg, #190065 0%, #3a0068 100%);
-  color: white;
-  padding: 10px 20px;
+  background-color: var(--white);
+  color: var(--primary-color);
+  padding: 15px 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: var(--shadow);
+  position: sticky; /* Keeps nav at the top */
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
   display: flex;
   align-items: center;
+  gap: 15px; /* Replaces margin-right */
 }
 
 .logo img {
-  height: auto;
-  max-height: 60px;
+  height: 60px;
   width: auto;
-  max-width: 150px;
-  margin-right: 15px;
-  filter: brightness(0) invert(1);
 }
 
 .logo h1 {
   margin: 0;
-  font-size: 1.5rem;
-  color: #fff;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  font-size: 1.8rem;
 }
 
 .logo p {
   margin: 0;
   font-size: 0.9rem;
-  color: #e0e0e0;
+  color: #6c757d;
 }
 
-/* Horizontal Navbar */
 .main-nav ul {
   display: flex;
   list-style: none;
-  padding: 0;
-  margin: 0;
-  background: transparent;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-.main-nav li {
-  margin: 0;
-}
-
 .main-nav a {
   display: block;
-  padding: 12px 18px;
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-  transition: all 0.3s;
-  border-radius: 4px;
-  margin: 2px;
+  padding: 10px 15px;
+  color: var(--primary-color);
+  font-weight: 700;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .main-nav a:hover {
-  background-color: rgba(255,255,255,0.2);
-  transform: translateY(-2px);
-}
-
-/* Banner Image */
-.banner-image {
-  width: 100%;
-  background-color: #f5f5f5;
-  text-align: center;
-  padding: 0;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.banner-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-  max-height: 500px;
-  object-fit: cover;
-  margin: 0 auto;
-}
-
-/* Conference Title Section */
-.conference-title {
-  background: linear-gradient(135deg, rgb(239, 239, 238) 0%, #f0f7ff 100%);
-  text-align: center;
-  padding: 30px 2px;
-  color: #0d0477;
-}
-
-.conference-title h2 {
-  color: #190065;
-  font-size: 2.2em;
-  margin-bottom: 10px;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
-}
-
-.conference-title p {
-  font-size: 1.2em;
-  color: #d32f2f;
-  margin: 5px 0;
-  font-weight: 600;
-}
-
-.conference-title p strong {
-  color: #190065;
-}
-
-/* Main Content */
-main {
-  padding: 30px 20px;
-  width: 1000px;
-  margin: 0 auto;
-  background-color: white;
-  box-shadow: 0 0 20px rgba(0,0,0,0.1);
-  border-radius: 8px;
-  margin-top: 20px;
-  margin-bottom: 40px;
-}
-
-section {
-  margin-bottom: 40px;
-  padding: 20px;
-  background-color: white;
-  border-radius: 6px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-h2 {
-  color: #190065;
-  font-size: 1.8em;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #e0e0e0;
-  text-align: center;
-}
-
-/* Info Section */
-.info p {
-  margin-bottom: 15px;
-  color: #444;
-  line-height: 1.7;
-}
-
-.info a {
-  color: #1976d2;
+  background-color: var(--primary-color);
+  color: var(--white);
   text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
 }
 
-.info a:hover {
-  color: #0d47a1;
-  text-decoration: underline;
-}
+/* --- 3. Hero Section (Title & Banner) --- */
+/* The banner image is now a background for the title section */
+.banner-image { display: none; } /* Hide the old banner img element */
 
-/* Program Section */
-.program {
-  background-color: #f5f9ff;
-}
-
-.program p {
+#home.conference-title {
+  color: var(--white);
+  background: linear-gradient(rgba(13, 59, 102, 0.7), rgba(13, 59, 102, 0.7)), url('https://events.iitbhilai.ac.in/icmc2025/LDC.jpeg') no-repeat center center;
+  background-size: cover;
+  padding: 100px 20px;
   text-align: center;
-  margin-bottom: 15px;
-  color: #555;
 }
 
-.program a {
-  color: #d32f2f;
-  font-weight: 600;
+#home h2 {
+  font-size: 3.5rem;
+  color: var(--white);
+  border-bottom: 4px solid var(--accent-color);
+  margin-bottom: 1rem;
 }
 
-/* Table */
-table {
+#home p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+#home p strong {
+  font-weight: 700;
+  color: var(--accent-color);
+}
+
+
+/* --- 4. Main Content Layout --- */
+.main-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left; /* Better for readability */
+}
+
+.main-content section {
+  background-color: var(--white);
+  margin-bottom: 40px;
+  padding: 40px;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  text-align: center; /* Center section content */
+}
+
+.main-content .info p {
+  margin-bottom: 1rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.1rem;
+}
+
+/* --- 5. Program Table --- */
+.program table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 20px;
-  background-color: white;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+  background-color: var(--white);
+  font-size: 1rem;
 }
 
-th, td {
-  border: 1px solid #e0e0e0;
-  padding: 12px;
+.program th, .program td {
+  border: none;
+  padding: 15px;
   text-align: center;
+  border-bottom: 1px solid #dee2e6;
 }
 
-thead {
-  background: linear-gradient(135deg, #190065 0%, #3a0068 100%);
-  color: white;
+.program thead th {
+  background-color: var(--primary-color);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
-th {
-  font-weight: 600;
+.program tbody tr:nth-of-type(even) {
+  background-color: var(--light-gray);
 }
 
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
+.program tbody tr:hover {
+    background-color: var(--secondary-color);
 }
 
-tbody tr:hover {
-  background-color: #f0f7ff;
+.program .break {
+  background-color: #fffbeB; /* Light yellow */
+  color: #856404; /* Brown text */
+  font-weight: 700;
 }
 
-.break {
-  background-color: #fff3e0;
-  font-weight: bold;
-  color: #e65100;
-}
-
-/* Speakers and Committee Sections */
-#speakers, #committee {
-  background-color: #fff9f9;
-}
-
-/* Important Dates Section */
-#dates {
-  background-color: #f5fff5;
-}
-
+/* --- 6. Other Sections (Dates, Venue, etc.) --- */
 #dates ul {
-  list-style-position: inside;
+  list-style: none;
+  padding: 0;
+  display: inline-block;
   text-align: left;
-  max-width: 600px;
-  margin: 0 auto;
 }
-
 #dates li {
-  margin-bottom: 10px;
-  color: #2e7d32;
-  font-weight: 500;
-}
-
-/* Registration Section */
-#registration {
-  background-color: #fff5f5;
-}
-
-/* Sponsors Section */
-#sponsors {
-  background-color: #f5f5ff;
-}
-
-/* Venue Section */
-#venue {
-  background-color: #f5ffff;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23e5a92d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13"></path><path d="M8 12h13"></path><path d="M8 18h13"></path><path d="M3 6h.01"></path><path d="M3 12h.01"></path><path d="M3 18h.01"></path></svg>') no-repeat left center;
+  padding-left: 35px;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 #venue p {
-  margin-bottom: 15px;
-  color: #006064;
-  font-weight: 500;
+  font-size: 1.1rem;
 }
 
-/* Map Container */
 .map-container {
-  margin-top: 20px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
+  margin-top: 2rem;
+  border-radius: var(--border-radius);
   overflow: hidden;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Responsive */
+/* --- 7. Responsive Design --- */
+@media (max-width: 992px) {
+  .site-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
 @media (max-width: 768px) {
-  main {
-    width: 95%;
-    padding: 20px 10px;
+  h2 { font-size: 1.8rem; }
+  #home h2 { font-size: 2.5rem; }
+  #home p { font-size: 1.2rem; }
+
+  .main-content {
+    padding: 10px;
+  }
+  .main-content section {
+    padding: 25px;
   }
   
-  .logo {
-    flex-direction: column;
-    text-align: center;
-    margin-bottom: 10px;
-  }
-
   .main-nav ul {
     flex-direction: column;
     width: 100%;
   }
 
-  .main-nav a {
-    padding: 10px;
+  .main-nav li {
+    width: 100%;
     text-align: center;
   }
-  
-  section {
-    padding: 15px;
+  /* Adds a border between nav items on mobile */
+  .main-nav li:not(:last-child) {
+    border-bottom: 1px solid rgba(13, 59, 102, 0.2);
   }
 }
