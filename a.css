@@ -272,3 +272,30 @@ section {
     border-bottom: 1px solid rgba(13, 59, 102, 0.2);
   }
 }
+
+
+#sponsors {
+  text-align: center;
+  padding: 60px 0; /* more top & bottom padding */
+}
+
+.sponsor-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px; /* wider horizontal spacing between logos */
+  flex-wrap: wrap;
+  margin-top: 30px;
+  margin-bottom: 40px; /* spacing from the next section (e.g., Venue) */
+}
+
+.sponsor-logos img {
+  width: 180px;          /* increased size from 150px */
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.sponsor-logos img:hover {
+  transform: scale(1.1); /* optional: zoom effect on hover */
+}
