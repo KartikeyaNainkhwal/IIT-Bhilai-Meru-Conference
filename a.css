@@ -299,3 +299,51 @@ section {
 .sponsor-logos img:hover {
   transform: scale(1.1); /* optional: zoom effect on hover */
 }
+
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+/* Responsive nav */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hamburger {
+    display: block;
+    margin-left: auto;
+    padding: 10px 15px;
+  }
+
+  .main-nav {
+    width: 100%;
+    display: none;
+  }
+
+  .main-nav.show {
+    display: block;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main-nav li {
+    width: 100%;
+    text-align: left;
+    border-top: 1px solid #ddd;
+  }
+
+  .main-nav a {
+    padding: 12px 20px;
+    display: block;
+  }
+}
+
+
