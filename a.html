@@ -19,7 +19,7 @@
         <p><small>IIT Bhilai Campus</small></p>
       </div>
     </div>
-    <nav class="main-nav">
+    <nav class="main-nav" id="main-nav">
       <ul>
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -156,3 +156,15 @@
 
 </body>
 </html>
+
+
+  <script>
+    // Toggle mobile menu
+    document.getElementById('hamburger').addEventListener('click', function () {
+      const nav = document.getElementById('main-nav');
+      nav.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
+
