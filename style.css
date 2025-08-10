@@ -436,4 +436,22 @@ section {
   color: var(--text-dark);
   line-height: 1.5;
 }
+.speakers-list {
+  max-width: 800px;
+  margin: 0 auto;
+  display: grid;
+  gap: 12px;
+}
+
+.speakers-list a {
+  color: var(--primary-color);
+  font-size: 1.15rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+
+.speakers-list a:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
 
