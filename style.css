@@ -122,7 +122,6 @@ section {
 }
 
 /* --- 3. Hero Section (Title & Banner) --- */
-/* The banner image is now a background for the title section */
 .banner-image { display: none; } /* Hide the old banner img element */
 
 #home.conference-title {
@@ -145,11 +144,18 @@ section {
   font-weight: 400;
   margin: 0.5rem 0;
 }
+
 #home p strong {
   font-weight: 700;
   color: var(--accent-color);
 }
 
+/* --- Highlight Notice (yellow text) --- */
+.notice {
+  color: #FFD700; /* Bright yellow */
+  font-weight: 700;
+  font-size: 1.3rem;
+}
 
 /* --- 4. Main Content Layout --- */
 .main-content {
@@ -204,7 +210,7 @@ section {
 }
 
 .program tbody tr:hover {
-    background-color: var(--secondary-color);
+  background-color: var(--secondary-color);
 }
 
 .program .break {
@@ -220,6 +226,7 @@ section {
   display: inline-block;
   text-align: left;
 }
+
 #dates li {
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23e5a92d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 6h13"></path><path d="M8 12h13"></path><path d="M8 18h13"></path><path d="M3 6h.01"></path><path d="M3 12h.01"></path><path d="M3 18h.01"></path></svg>') no-repeat left center;
   padding-left: 35px;
@@ -272,7 +279,6 @@ section {
     border-bottom: 1px solid rgba(13, 59, 102, 0.2);
   }
 }
-
 
 #sponsors {
   text-align: center;
@@ -345,6 +351,7 @@ section {
     display: block;
   }
 }
+
 /* --- Contact Section --- */
 #contact {
   background-color: var(--secondary-color); /* Matches section background tone */
@@ -405,12 +412,14 @@ section {
   margin: 0 auto;
 }
 
+/* --- Committee Cards Styling Upgrade --- */
 .committee-card {
   background: white;
-  padding: 20px 25px;
+  padding: 25px 30px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: left;
 }
 
 .committee-card:hover {
@@ -419,23 +428,37 @@ section {
 }
 
 .committee-card h3 {
-  color: var(--primary-color);
+  font-size: 1.5rem;
   margin-bottom: 15px;
-  font-size: 1.3rem;
+  border-bottom: 2px solid var(--accent-color);
+  padding-bottom: 6px;
 }
 
 .committee-card h4 {
-  color: var(--accent-color);
+  font-size: 1.2rem;
   margin-top: 20px;
-  margin-bottom: 8px;
-  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
 .committee-card p {
-  margin: 5px 0;
+  margin: 6px 0;
   color: var(--text-dark);
-  line-height: 1.5;
+  line-height: 1.6;
 }
+
+.committee-card strong {
+  color: var(--accent-color);
+}
+
+/* Optional: subtle dividers */
+.committee-card p + h4 {
+  margin-top: 25px;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
 .speakers-list {
   max-width: 800px;
   margin: 0 auto;
